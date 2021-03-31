@@ -9,6 +9,9 @@ import { QuestioneditorComponent } from './common/questioneditor/questioneditor.
 import { QuizComponent } from './common/quiz/quiz.component';
 import { HomeComponent } from './common/home/home.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FilterPipe } from './pipe/filter.pipe';
+import { SorterPipe } from './pipe/sorter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { NavigationComponent } from './common/navigation/navigation.component';
     QuestioneditorComponent,
     QuizComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    FilterPipe,
+    SorterPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,55 @@
-<p>admin works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8 offset-md-2 mt-5">
+        <h3>Quiz admin</h3>
+            <button class="btn btn-primary btn-block mt-2" [routerLink]="['quiz/' + '0']">
+            <i class="fa fa-plus"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-12 col-md-8 offset-md-2 mt-5">
+        <div class="row">
+          <div class="col-6">
+            <h3>Todo List</h3>
+          </div>
+          <div class="col-4">
+            <input (keyup)="onChangePhrase($event)" type="text" class="form-control" placeholder="search...">
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th (click)="onColumnSelect('id')">#</th>
+            <th (click)="onColumnSelect('title')">Title</th>
+            <th (click)="onColumnSelect('description')">Description</th>
+            <th (click)="onColumnSelect('question')">Questions</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let quiz of quiz$ | async | filter:'name': phrase | sorter: sorting">
+            <td>{{ quiz.id }}</td>
+            <td>{{ quiz.title }}</td>
+            <td>{{ quiz.description }}</td>
+            <td>{{ quiz.question }}</td>
+            <td>
+                <div class="btn-group ml-auto p-2">
+                    <button (click)="onUpdate(todo)" class="btn btn-info">
+                        <i class="fa fa-check"></i>
+                    </button>
+                    <button (click)="onDelete(todo)" class="btn btn-danger">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </div>
+            </td>
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
