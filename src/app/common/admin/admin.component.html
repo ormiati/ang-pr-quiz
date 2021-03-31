@@ -5,16 +5,12 @@
             <button class="btn btn-primary btn-block mt-2" [routerLink]="['quiz/' + '0']">
             <i class="fa fa-plus"></i>
           </button>
-        </form>
       </div>
     </div>
   
     <div class="row">
       <div class="col-12 col-md-8 offset-md-2 mt-5">
         <div class="row">
-          <div class="col-6">
-            <h3>Todo List</h3>
-          </div>
           <div class="col-4">
             <input (keyup)="onChangePhrase($event)" type="text" class="form-control" placeholder="search...">
           </div>
@@ -32,24 +28,23 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let quiz of quiz$ | async | filter:'name': phrase | sorter: sorting">
+          <tr *ngFor="let quiz of quiz$ | async | filter:'id, title, description, question': phrase | sorter: sorting">
             <td>{{ quiz.id }}</td>
             <td>{{ quiz.title }}</td>
             <td>{{ quiz.description }}</td>
             <td>{{ quiz.question }}</td>
+          </tr>
             <td>
                 <div class="btn-group ml-auto p-2">
-                    <button (click)="onUpdate(todo)" class="btn btn-info">
+                    <button (click)="onUpdate(quiz)" class="btn btn-info">
                         <i class="fa fa-check"></i>
                     </button>
-                    <button (click)="onDelete(todo)" class="btn btn-danger">
+                    <button (click)="onDelete(quiz)" class="btn btn-danger">
                         <i class="fa fa-trash"></i>
                     </button>
                 </div>
             </td>
         </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+    </table>
+</div>
   
