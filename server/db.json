@@ -1,0 +1,169 @@
+{
+    "students": [
+      {
+        "id": 1,
+        "name": "Johnnny Mnemonic",
+        "email": "johnny@mnemonic.com",
+        "points": 0,
+        "active": true
+      },
+      {
+        "id": 2,
+        "name": "Donna Noble",
+        "email": "donna.noble@gmail.com",
+        "points": 0,
+        "active": true
+      },
+      {
+        "id": 3,
+        "name": "Harry Potter",
+        "email": "hpotter@gmail.com",
+        "points": 0,
+        "active": true
+      }
+    ],
+    "quiz": [
+      {
+        "id": 1,
+        "title": "HTML kérdések",
+        "description": "Ez a HTML quiz. Minden kérdésre egy jó válasz adható.",
+        "questions": [
+          1,
+          2
+        ],
+        "active": true
+      },
+      {
+        "id": 2,
+        "title": "CSS kérdések",
+        "description": "Ez a CSS quiz. Minden kérdésre egy jó válasz adható.",
+        "questions": [
+          3,
+          4
+        ],
+        "active": true
+      }
+    ],
+    "queistons": [
+      {
+        "id": 1,
+        "title": "HTML kérdések",
+        "description": "Ez a HTML quiz. Minden kérdésre egy jó válasz adható.",
+        "questions": [
+          {
+            "id": 1,
+            "question": "Melyik nem szemantikus elem?",
+            "answers": [
+              {
+                "id": 1,
+                "content": "Article",
+                "correct": false
+              },
+              {
+                "id": 2,
+                "content": "Div",
+                "correct": true
+              },
+              {
+                "id": 3,
+                "content": "Main",
+                "correct": false
+              },
+              {
+                "id": 4,
+                "content": "Footer",
+                "correct": false
+              }
+            ],
+            "points": 2,
+            "active": "true"
+          },
+          {
+            "id": 2,
+            "question": "Mikor használjuk a strongot?",
+            "answers": [
+              {
+                "id": 5,
+                "content": "Ha erősebbé szeretnénk válni.",
+                "correct": false
+              },
+              {
+                "id": 6,
+                "content": "Ha ki szeretnénk emelni egy szövegrészletet.",
+                "correct": true
+              },
+              {
+                "id": 7,
+                "content": "Ha dőlt betűt szeretnénk.",
+                "correct": false
+              },
+              {
+                "id": 8,
+                "content": "Semmire, ilyet sose használunk.",
+                "correct": false
+              }
+            ],
+            "points": 2,
+            "active": "true"
+          },
+          {
+            "id": 3,
+            "question": "Melyik selectorral választjuk ki a <div class='container'></div> elemet?>",
+            "answers": [
+              {
+                "id": 1,
+                "content": "#container",
+                "correct": false
+              },
+              {
+                "id": 2,
+                "content": "container",
+                "correct": false
+              },
+              {
+                "id": 3,
+                "content": ".container",
+                "correct": true
+              },
+              {
+                "id": 4,
+                "content": "div#container",
+                "correct": false
+              }
+            ],
+            "points": 2,
+            "active": "true"
+          },
+          {
+            "id": 4,
+            "question": "Minek a rövidítése a CSS?",
+            "answers": [
+              {
+                "id": 5,
+                "content": "Compiler Style Sheets",
+                "correct": false
+              },
+              {
+                "id": 6,
+                "content": "Conditional Style Ship.",
+                "correct": false
+              },
+              {
+                "id": 7,
+                "content": "Cascading Sheets Style.",
+                "correct": false
+              },
+              {
+                "id": 8,
+                "content": "Cascading Style Sheets.",
+                "correct": true
+              }
+            ],
+            "points": 2,
+            "active": "true"
+          }
+        ]
+      }
+    ]
+}
+      
