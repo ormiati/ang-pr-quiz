@@ -8,7 +8,7 @@ import { Quiz } from '../model/quiz';
 })
 export class QuizService {
 
-  serverAddress: string ='http://localhost:3000/quiz';
+  serverAddress: string ='http://localhost:3000/quizzes';
 
   constructor(
     private http: HttpClient
